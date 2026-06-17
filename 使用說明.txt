@@ -1,0 +1,24 @@
+作業3：台灣水果迷你知識庫
+
+【環境變數 .env】
+OPENAI_API_KEY=（OpenAI）
+QDRANT_URL=（Qdrant Cloud，例 https://xxxx.cloud.qdrant.io:6333）
+QDRANT_API_KEY=（Cloud API Key）
+
+Qdrant 申請方式見課程 AI-Agent-v4.pdf「階段 3」開頭（Free tier）。
+
+【執行順序】
+npm install
+npm run init      ← 知識庫初始化（5 筆寫入向量庫）
+npm run search    ← 3 種問法搜尋測試
+
+【繳交】
+- lib/openai.js、lib/qdrant.js（Embeddings + 向量庫）
+- scripts/init-knowledge.js、scripts/search-test.js
+- data/knowledge.js
+- 附上 search 輸出結果（截圖或文字）
+
+【StackBlitz 注意】
+1. QDRANT_URL 必須是 Qdrant Cloud 的 https 網址，不可用 http://localhost:6333。
+2. 錯誤若出現 127.0.0.1:6333，代表 URL 設錯或未讀到 .env。
+3. 若 URL 正確仍 fetch failed，請改 GitHub Codespaces 或本機執行 init/search（與作業2 OpenAI 相同限制）。

@@ -1,0 +1,19 @@
+{
+  "name": "homework3-mini-kb",
+  "version": "1.0.0",
+  "description": "作業3：迷你知識庫（Embeddings + Qdrant）",
+  "type": "module",
+  "scripts": {
+    "init": "node scripts/init-knowledge.js",
+    "search": "node scripts/search-test.js",
+    "test:qdrant": "node scripts/test-qdrant-connection.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "dependencies": {
+    "@qdrant/js-client-rest": "^1.17.0",
+    "dotenv": "^17.4.2",
+    "openai": "^6.38.0"
+  }
+}
